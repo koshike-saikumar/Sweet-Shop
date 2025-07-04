@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { BiUser } from "react-icons/bi";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 // import { useDispatch } from "react-redux";
 // import { Helmet } from "react-helmet-async";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 // import { doc, getDoc } from "firebase/firestore";
 // import { auth, db } from "../config/firebase";
@@ -17,13 +17,13 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [passwordVisible, setPasswordVisible] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const navigate = useNavigate();
+  // const [loading, setLoading] = useState(false);
+  // const navigate = useNavigate();
 //   const dispatch = useDispatch();
 
-//   const togglePasswordVisibility = () => {
-//     setPasswordVisible(!passwordVisible);
-//   };
+  const togglePasswordVisibility = () => {
+    setPasswordVisible(!passwordVisible);
+  };
 
 //   const signinUser = async (e) => {
 //     e.preventDefault();
@@ -169,12 +169,12 @@ const Login = () => {
                   {passwordVisible ? (
                     <AiOutlineEye
                       className="input-icon cursor-pointer"
-                    //   onClick={togglePasswordVisibility}
+                      onClick={togglePasswordVisibility}
                     />
                   ) : (
                     <AiOutlineEyeInvisible
                       className="input-icon cursor-pointer"
-                    //   onClick={togglePasswordVisibility}
+                      onClick={togglePasswordVisibility}
                     />
                   )}
                 </div>
@@ -189,18 +189,18 @@ const Login = () => {
                 </div>
                 <button
                   type="submit"
-                  disabled={loading}
+                  // disabled={loading}
                   className="login-button"
                 >
-                  {loading ? "Logging in..." : "Login"}
+                  {/* {loading ? "Logging in..." : "Login"} */}
                 </button>
                 <button
                   type="button"
                 //   onClick={guestLogin}
-                  disabled={loading}
+                  // disabled={loading}
                   className="login-button guest-login-button"
                 >
-                  {loading ? "Logging in..." : "Guest Login"}
+                  {/* {loading ? "Logging in..." : "Guest Login"} */}
                 </button>
                 <div className="signup-link">
                   <span>

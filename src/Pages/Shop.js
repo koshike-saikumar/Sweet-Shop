@@ -4,13 +4,13 @@ import { CartContext } from './CartContext';
 import './Shop.css';
 import Header from '../Components/Header';
 import Footer from '../Components/Footer';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import { Toast } from '../utils/toast';
 
 
 const Shop = () => {
   const { addToCart } = useContext(CartContext);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   
   return (
     <>
