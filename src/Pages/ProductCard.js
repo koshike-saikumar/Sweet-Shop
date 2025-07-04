@@ -11,7 +11,12 @@ const ProductCard = ({ product, onAddToCart }) => {
       <h3>{product.name}</h3>
       <p>{product.description}</p>
       <div className="product-footer">
-        <span className="price">${product.price.toFixed(2)}</span>
+        <span style={{
+                fontFamily: "'Raleway', sans-serif",
+                fontSize: '20px',
+                color: '#D97706',
+                fontStyle: 'italic'
+              }} className="price">₹{product.price.toFixed(2)}</span>
         <button onClick={() => navigate("/login")} className="add-to-cart">
           Add to Cart
         </button>

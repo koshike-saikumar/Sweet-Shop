@@ -15,7 +15,7 @@ const Footer = () => {
           <ul>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/shop">Shop</Link></li>
-            <li><Link to="/checkout">Cart</Link></li>
+            <li><Link to="/cart">Cart</Link></li>
           </ul>
         </div>
         <div className="footer-section">
