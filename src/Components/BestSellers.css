@@ -1,0 +1,252 @@
+/* Best Sellers Section */
+.best-sellers {
+  padding: 4rem 2rem;
+  background-color: #f6f5f5;
+  position: relative;
+  overflow: hidden;
+}
+
+.best-sellers::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: url('/src/Components/img/7426301.jpg') center/cover no-repeat; */
+  opacity: 0.03;
+  z-index: 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: #7f3d54;
+  margin-bottom: 0.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: #ff9800;
+}
+
+.section-header p {
+  color: #666;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* .products-grid {
+  display: flex;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+} */
+
+.best-seller-card {
+  position: relative;
+}
+
+.best-seller-card::before {
+  content: 'BEST SELLER';
+  position: absolute;
+  top: 15px;
+  left: -10px;
+  background-color: #ff9800;
+  color: white;
+  padding: 0.3rem 1rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border-radius: 4px;
+  z-index: 2;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.view-all {
+  text-align: center;
+  margin-top: 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.view-all-btn {
+  background-color: transparent;
+  color: #7f3d54;
+  border: 2px solid #ac4569;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.view-all-btn:hover {
+  background-color: #7f3d54;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(233, 30, 99, 0.3);
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.best-seller-card {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.best-seller-card:nth-child(1) { animation-delay: 0.1s; }
+.best-seller-card:nth-child(2) { animation-delay: 0.2s; }
+.best-seller-card:nth-child(3) { animation-delay: 0.3s; }
+.best-seller-card:nth-child(4) { animation-delay: 0.4s; }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .best-sellers {
+    padding: 3rem 1rem;
+  }
+  
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  /* .products-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+  } */
+}
+
+@media (max-width: 480px) {
+  .best-sellers {
+    padding: 2rem 1rem;
+  }
+  
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  /* .products-grid {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+  } */
+}
+
+.best-sellers {
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap; /* Prevents wrapping */
+}
+
+.products-grid {
+  display: inline-flex; /* Ensures single row */
+  gap: 20px; /* Space between cards */
+  animation: scroll 10s linear infinite; /* Adjust speed here (15s = slower, 5s = faster) */
+  padding: 10px 0;
+}
+
+/* Animation for smooth scrolling */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Ensures cards stay in a single row */
+.best-seller-card {
+  flex: 0 0 auto; /* Prevents flex shrinking/growing */
+  width: 250px; /* Fixed card width */
+}
+
+.view-all {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.view-all-btn {
+  background-color: #D97706;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.view-all-btn:hover {
+  background-color: #B65E00;
+}
+/* Update the marquee container and products grid */
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.products-grid {
+  display: inline-flex;
+  gap: 20px;
+  animation: scroll 15s linear infinite;
+  position: relative;
+  animation-play-state: running; /* Default state */
+}
+
+/* Pause animation on hover */
+.products-grid:hover {
+  animation-play-state: paused;
+}
+
+/* Keep the rest of your existing styles */
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Previous styles remain the same */
+.best-sellers {
+  padding: 4rem 2rem;
+  background-color: #f6f5f5;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ... rest of your existing CSS ... */

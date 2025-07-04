@@ -1,0 +1,64 @@
+.banner {
+  background: linear-gradient(rgba(216, 196, 196, 0.5), rgba(0, 0, 0, 0.5)), 
+              url('/src/Components/img/phote-3.jpg') center/cover no-repeat;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  
+  /* For debugging */
+  /* border: 2px solid red; */
+  
+  /* Temporary - remove after debugging */
+}
+
+.banner-content {
+  max-width: 800px;
+  padding: 0 2rem;
+}
+
+.banner h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.banner p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.shop-now-btn {
+  display: inline-block;
+  background-color: #a03449;
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.shop-now-btn:hover {
+  background-color: #e91e63;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .banner {
+    height: 50vh;
+  }
+
+  .banner h1 {
+    font-size: 2rem;
+  }
+
+  .banner p {
+    font-size: 1.2rem;
+  }
+}
