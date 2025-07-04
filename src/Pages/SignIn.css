@@ -1,0 +1,111 @@
+/* SignIn Page Styles */
+.signin-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: calc(100vh - 120px); /* Adjust based on your header/footer height */
+}
+
+.signin-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.signin-title {
+  color: #e91e63;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.signin-description {
+  color: #666;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.signin-form {
+  max-width: 500px;
+  margin: 0 auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #555;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #e91e63;
+  box-shadow: 0 0 0 2px rgba(233, 30, 99, 0.2);
+  outline: none;
+}
+
+.signin-button {
+  background: #e91e63;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.signin-button:hover {
+  background: #c2185b;
+  transform: translateY(-2px);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .signin-container {
+    padding: 1.5rem;
+  }
+  
+  .signin-form {
+    padding: 1.5rem;
+  }
+
+  .signin-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .signin-title {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .signin-description {
+    font-size: 1rem;
+  }
+  
+  .signin-form {
+    padding: 1.25rem;
+  }
+}

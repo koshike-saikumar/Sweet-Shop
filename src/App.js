@@ -9,6 +9,7 @@ import './App.css';
 import Login from './Pages/Login';
 import Cart from './Pages/Cart';
 import { ToastContainer } from 'react-toastify';
+import SignIn from './Pages/SignIn';
 // import 'react-toastify/dist/ReactToastify.css';
 
 
@@ -34,6 +35,7 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/login" element={<Login />} />
+                <Route path="/signup" element={<SignIn />} />
 
                 <Route path="/shop" element={<Shop />} />
                 {/* <Route path="/product/:id" element={<ProductDetail />} /> */}
